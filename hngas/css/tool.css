@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+/* -------------------- */
+
+body {
+  color: #111a19;
+  font-optical-sizing: auto;
+  font: normal 600 1.6rem "M PLUS 2", sans-serif;
+}
+
+/* -------------------- */
+
+select,
+button,
+input,
+textarea,
+.tab-menu li {
+  border-radius: 4px;
+  border: 2px solid #111a19;
+  color: #111a19;
+  font-optical-sizing: auto;
+  font: normal 600 1.4rem "M PLUS 2", sans-serif;
+  padding: 8px;
+}
+select,
+button,
+.tab-menu li {
+  cursor: pointer;
+}
+
+textarea,
+input {
+  margin-top: 12px;
+  color: #22302f;
+  font-optical-sizing: auto;
+  font: normal 500 1.2rem "M PLUS 2", sans-serif;
+}
+
+/* -------------------- */
+
+h1 {
+  font-size: 2.4rem;
+}
+.content > div {
+  margin-top: 40px;
+}
+.inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* -------------------- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 8px 16px 8px;
+  text-align: center;
+}
+th {
+  background-color: #ffc90b;
+  font-family: "Palanquin Dark", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+th {
+  width: calc(100% / 7);
+}
+td {
+  background-color: #f1f7f6;
+  font-weight: 600;
+  vertical-align: top;
+}
+th:nth-of-type(n + 2),
+td:nth-of-type(n + 2) {
+  border-left: 1px solid #fff;
+}
+tr:nth-child(n + 3) td {
+  border-top: 1px solid #fff;
+}
+td div {
+  margin-top: 4px;
+}
+td div:nth-of-type(2) {
+  margin-top: 8px;
+}
+td div:last-of-type {
+  margin-top: 12px;
+}
+td > div * {
+  display: block;
+  width: 100%;
+}
+td > div *:nth-child(n + 2) {
+  margin-top: 4px;
+}
+
+/* ---------- tab ---------- */
+
+.tab-menu {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+.tab-menu li {
+  padding: 16px 8px;
+  border: 2px solid transparent;
+  width: 50%;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab-menu li[data-tab="abiko"] {
+  background-color: #15c4ac;
+}
+.tab-menu li[data-tab="koshigaya"] {
+  background-color: #a1ace5;
+}
+.tab-menu li:hover {
+  background-color: #ffc90b !important;
+  border: 2px solid #111a19;
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* ---------------------------------------- */
+
+.content {
+  width: 80%;
+  margin: 5% auto;
+}
+
+/* -------------------- */
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 100%;
+}
+
+/* ---------- button ---------- */
+
+button {
+  display: block;
+  padding: 16px 8px;
+  border: 2px solid transparent;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #f2aace;
+  font-weight: 800;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ffc90b !important;
+  border: 2px solid #111a19;
+}
+
+.calendar {
+  width: 20%;
+}
+
+#abiko .value button,
+#abiko #schedule-form button {
+  background-color: #15c4ac;
+}
+
+#koshigaya .value button,
+#koshigaya button.generateButton {
+  background-color: #a1ace5;
+}
+
+/* -------------------- */
+
+#calendarContainer {
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+[id*="_am_"] {
+  background-color: #fdf8f2;
+}
+[id*="_pm_"] {
+  background-color: #fdf2f8;
+}
+[id*="teacher_"],
+[id*="price_"] {
+  background-color: #fff;
+}
+
+input::placeholder,
+select[id*="teacher_"]:has(option:checked[value=""]) {
+  color: #b8bbba;
+  font-weight: 400;
+}
+
+/* ---------------------------------------- */
+
+.generate_area_wrap {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+.generate_area {
+  width: 50%;
+}
+
+/* ---------------------------------------- */
+
+.hidden {
+  display: none;
+}
+
+/* ---------------------------------------- */
+
+.palanquin-dark-regular {
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.palanquin-dark-semibold {
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.palanquin-dark-bold {
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.outfit-bold {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
